@@ -1,0 +1,40 @@
+.header-logo {            
+    float: left;            
+    font-size: 36px;      
+    padding: 20px 40px;
+ }
+.header-list {
+    float: right;
+    padding: 20px;
+}
+.header-list button {
+    font-size: 15px;    
+}
+.header {
+    background-color: #CCFFFF;
+    height: 100px;
+}
+.random-button button {
+    font-size :24px;
+}
+.random-button {
+    text-align:center;
+}
+.select-meal {
+    text-align:center;
+}
+.meal-register {
+    text-align:center;
+}
+.meals-list {
+    text-align:center;
+}
+.meal-detail {
+    text-align:center;
+}
+.categoly-list {
+    text-align:center;
+}
+.categoly-create {
+    text-align:center;
+}

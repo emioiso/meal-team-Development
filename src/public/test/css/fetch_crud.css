@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+  }
+
+li button {
+    margin: 3px;
+}
+
+.updateBtn {
+    margin: 5px;
+}

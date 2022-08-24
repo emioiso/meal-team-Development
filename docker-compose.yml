@@ -1,0 +1,39 @@
+version: '2'
+
+volumes:
+  db-store:
+    driver: local
+
+services:
+  db:
+    container_name: mysql8
+    image: mysql:8.0
+    volumes:
+      - db-store:/var/lib/mysql
+      - ./docker/logs:/var/log/mysql
+      - ./docker/db/etc/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - TZ=${TZ}
+    ports:
+      - 3306:3306
+    mem_limit: 1g
+  php:
+    container_name: php
+    links:
+      - db
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    command: php /var/www/html/laravel/artisan serve --host 0.0.0.0  --port=9000
+    ports:
+      - "9000:9000"
+    mem_limit: 1g
+
+    volumes:
+      - ${PWD}/src:/var/www/html/laravel:cached
+      - ./php/etc/php.ini:/usr/local/etc/php/php.ini
+      - ./logs:/var/log
