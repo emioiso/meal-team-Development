@@ -1,6 +1,6 @@
-.header-logo {            
-    float: left;            
-    font-size: 36px;      
+.header-logo {
+    float: left;
+    font-size: 36px;
     padding: 20px 40px;
  }
 .header-list {
@@ -8,33 +8,64 @@
     padding: 20px;
 }
 .header-list button {
-    font-size: 15px;    
+    font-size: 15px;
 }
 .header {
     background-color: #CCFFFF;
     height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
 }
 .random-button button {
     font-size :24px;
+
 }
 .random-button {
     text-align:center;
+    margin:50px;
 }
 .select-meal {
     text-align:center;
+    margin:50px;
 }
 .meal-register {
     text-align:center;
 }
+label {
+    padding: 10px 40px;
+    color: #ffffff;
+    background-color:#E5E5E5;
+    cursor: pointer;
+}
+.sentaku {
+display: none;
+}
+
 .meals-list {
     text-align:center;
+    margin:50px;
 }
 .meal-detail {
     text-align:center;
+    margin:50px;
 }
 .categoly-list {
     text-align:center;
+    margin:50px;
 }
 .categoly-create {
     text-align:center;
+    margin:50px;
 }
+.postBtn{
+    position: relative;
+    top:6px;
+    box-shadow:none;
+    margin:50px;
+    background-color:;
+    width : 150px;
+    height: 50px;
+    font-weight: bold;
+}
+

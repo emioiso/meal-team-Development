@@ -20,48 +20,58 @@
           <form action="/register"method="POST"id='form'>
             <h1>料理登録</h1>
             <div class="meal-name">
+               <h2>写真を登録する</h2>
+               <div style="text-align:center">
+                <form action="index.php" method="post" enctype="multipart/form-data" >
+                <label><input class="sentaku" type="file" name="image" accept="image/*" >写真を選択</label>
+                <br>
+                <br>
+                <input type="submit" value="送信">
+                </div>
+
+
               <h2>料理名</h2>
               <input type="text"placeholder="オムライス"name="名前">
             </div>
-            
+
             <div class="meal-Ingredients_Memo">
               <h2>材料メモ</h2>
-              <input type="text"placeholder="卵二個、牛乳"name="メモ">
+              <textarea  type="text"placeholder="・卵二個・牛乳"name="メモ"></textarea>
             </div>
-            
+
             <div class="meal-way">
               <h2>作り方</h2>
               <input type="text"placeholder="卵を割って～～～"name='作り方'>
             </div>
-            
+
             <div class="meal-cost">
               <h2>コスト</h2>
-              <input type="number"placeholder="500"name='コスト'>円
-            </div>  
-            
-            <div class="meal-categoly">
+              <input type="number"placeholder="500円"name='コスト'>
+            </div>
+
+            <!--<div class="meal-categoly">
               <h2>カテゴリー</h2>
               <select class="select-categoly">
                 <option>選択してください</option>
-            　</select>                
-            </div>
-            
+            　</select>
+            </div>-->
+
             <div clas="meal-diffyculty">
               <h2>難易度</h2>
-              <input type="radio"name="難易度" value=1 checked> レベル1
-              <input type="radio" name="難易度"  value=2> レベル２
-              <input type="radio" name="難易度" value=3> レベル3
+              <input type="radio"name="難易度"value=1 checked> レベル1
+              <input type="radio"name="難易度"value=2> レベル２
+              <input type="radio"name="難易度"value=3> レベル3
             </div>
-            
+
             <div class="meal-satiety">
               <h2>満腹度</h2>
-              <input type="radio"name="満足度" value=1 checked> ちょっと食べたい
-              <input type="radio"  name="満足度"value=2> ちょうどいい
-              <input type="radio"name="満足度" value=3> がっつり
+              <input type="radio"name="満足度"value=1 checked> ちょっと食べたい
+              <input type="radio"name="満足度"value=2> ちょうどいい
+              <input type="radio"name="満足度"value=3> がっつり
 
             </div>
-            
-            <input type="button" value="登録する" class="postBtn"id="meal_create">  
+
+            <input type="button" value="登録する" class="postBtn"id="meal_create">
           </form>
         </div>
       </div>
