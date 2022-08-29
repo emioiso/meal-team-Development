@@ -37,9 +37,12 @@ label {
     color: #ffffff;
     background-color:#E5E5E5;
     cursor: pointer;
+    border-radius
 }
+
 .sentaku {
 display: none;
+border-radius
 }
 
 .meals-list {
@@ -58,14 +61,63 @@ display: none;
     text-align:center;
     margin:50px;
 }
-.postBtn{
-    position: relative;
-    top:6px;
-    box-shadow:none;
+
+/* ボタン共通設定 */
+.btn03{
     margin:50px;
-    background-color:;
-    width : 150px;
-    height: 50px;
-    font-weight: bold;
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+    text-align: center;
+    background: transparent;
+	border-radius: 25px;
+	border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
 }
 
+/*hoverをした後のボタンの形状*/
+.btn03:hover{
+	border-color:transparent;
+}
+
+/*ボタンの中のテキスト*/
+.btn03 span {
+	position: relative;
+	z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+	display: block;
+    padding: 10px 30px;
+	background:#fff;
+	border-radius: 25px;
+	color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+}
+
+/*== 右下に押し込まれる（立体が平面に） */
+
+/*影の設定*/
+.pushright:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+	z-index: -1;
+    top: 4px;
+    left: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+	border-radius: 25px;
+    background-color: #333;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+	background-color: #333;
+	color: #fff;
+	transform: translate(4px, 4px);
+}

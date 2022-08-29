@@ -20,15 +20,15 @@
           <form action="/register"method="POST"id='form'>
             <h1>料理登録</h1>
             <div class="meal-name">
-               <h2>写真を登録する</h2>
-               <div style="text-align:center">
-                <form action="index.php" method="post" enctype="multipart/form-data" >
-                <label><input class="sentaku" type="file" name="image" accept="image/*" >写真を選択</label>
-                <br>
-                <br>
-                <input type="submit" value="送信">
-                </div>
 
+                <h2>写真を登録する</h2>
+                <div style="text-align:center">
+                 <form action="index.php" method="post" enctype="multipart/form-data" >
+                 <label><input class="sentaku" type="file" name="image" accept="image/*" >写真を選択</label>
+                 <br>
+                 <br>
+                 <input type="submit" value="送信">
+                 </div>
 
               <h2>料理名</h2>
               <input type="text"placeholder="オムライス"name="名前">
@@ -68,13 +68,19 @@
               <input type="radio"name="満足度"value=1 checked> ちょっと食べたい
               <input type="radio"name="満足度"value=2> ちょうどいい
               <input type="radio"name="満足度"value=3> がっつり
-
             </div>
 
-            <input type="button" value="登録する" class="postBtn"id="meal_create">
+
+
+            <a href="#" class="btn03 pushright" id="meal_create"><span>登録する</span></a>
+
           </form>
         </div>
       </div>
+      <!--ここからバリデーションかく-->
       <script src="js/meal_card.js"></script>
+
+
+
     </body>
 </html>
